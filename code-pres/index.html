@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Code Pres | Presentador de src</title>
+  <link rel="stylesheet" href="./assets/styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="tabs-shell">
+      <div class="tabs-topbar">
+        <div class="tabs-topbar-left">
+          <span class="tabs-topbar-dot red"></span>
+          <span class="tabs-topbar-dot yellow"></span>
+          <span class="tabs-topbar-dot green"></span>
+          <span class="tabs-topbar-label">src</span>
+        </div>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Cambiar tema">
+          <span id="theme-toggle-text">Modo claro</span>
+        </button>
+      </div>
+      <div id="file-list" class="file-tabs" aria-label="Archivos de src"></div>
+    </section>
+
+    <section class="layout">
+      <aside class="sidebar">
+        <section class="panel explanation-panel">
+          <div class="panel-header">
+            <small>Explicacion</small>
+            <h2 id="explanation-title">Selecciona un archivo</h2>
+          </div>
+          <p id="explanation-summary" class="panel-copy">
+            Elige un archivo del proyecto para ver su contenido y su contexto.
+          </p>
+          <ul id="explanation-points" class="panel-points">
+            <li>Cuando un archivo tenga secciones explicadas, apareceran a la derecha.</li>
+            <li>Al seleccionar un bloque, el borde cambia a rojo.</li>
+            <li>El visor completo puede resaltar la zona correspondiente dentro del archivo.</li>
+          </ul>
+        </section>
+      </aside>
+
+      <section class="viewer">
+        <section class="panel code-panel">
+          <div class="code-toolbar">
+            <span id="code-file-label">src/cifrado_aes_ctr_paralelo.py</span>
+            <span id="code-toolbar-hint" class="code-toolbar-hint">Visor completo</span>
+          </div>
+          <pre class="code-viewer"><code id="code-content"></code></pre>
+        </section>
+      </section>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    Creado por Colchones
+  </footer>
+
+  <script src="./data/source-files.js"></script>
+  <script src="./data/presentations.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
